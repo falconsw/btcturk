@@ -1,3 +1,20 @@
+## BtcTurk Php Api Client
+
+Bu Api ile Neler Yapılır ?
+-------------
+
+	- [x] BTC ve ETH Anlık Fiyat bilgisi alınabilir.
+    - [x] BTC alış ve satışlardaki değerler görüntülenebilir.
+    - [x] BTC market geçmişi görüntülenebilir.
+    - [x] Günlük BTC fiyat grafiği mumlarına erişilebilir.
+    - [x] Kullanıcı Trade geçmişi görüntülenebilir.
+    - [x] Açık Trade İşlemleri görüntülenebilir.
+    - [x] TL, BTC ve ETH bakiyeleri görüntülenebilir.
+    - [x] İşlem iptali yapılabilir.
+    - [x] BTC ve ETH alışı, satışı yapılabilir.
+    - [x] Alış ve Satışta : Market , Limit ve Stop Özelliği kullanılabilir.
+
+
 > English Document
 
 
@@ -44,13 +61,13 @@ Gereksinimler
 Kullanımı
 -------------
 
-
 	$key = 'PUBLIC_KEY'; // public ve private keylerini kullan
 	$secret = 'PRIVATE_KEY';
 
 	$b = new Client ($key, $secret);
 	
 	$list = $b->getBalances();
+
 
 [Issue](https://github.com/falconsw/btcturk/issues)
 
