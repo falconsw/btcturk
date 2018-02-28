@@ -58,7 +58,7 @@ Kullanımı
 
 Source 
 ===
-Btcturk 
-https://github.com/BTCTrader/broker-api-docs
+Btcturk  https://github.com/BTCTrader/broker-api-docs
 
 
+ 
