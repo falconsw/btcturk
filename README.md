@@ -55,12 +55,8 @@ Kullanımı
 	
 	$list = $b->getBalances();
 
+[Issue](https://github.com/falconsw/btcturk/issues)
 
-Source 
-===
-Btcturk  https://github.com/BTCTrader/broker-api-docs
+[Source](https://github.com/BTCTrader/broker-api-docs)
 
-
-Company
-=====
-https://coinfono.com
+[coinfono.com](https://coinfono.com)
