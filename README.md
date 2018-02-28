@@ -64,7 +64,7 @@ Kullanımı
 License
 -----
 
-Larislackers-BinanceApi is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+BtcTurk-Api is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 Donations/Support
 -----
