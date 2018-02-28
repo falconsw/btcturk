@@ -1,6 +1,4 @@
-English Document
-======
-
+> English Document
 
 
 PHP wrapper class for Btcturk API 
@@ -27,8 +25,7 @@ Usage
 
 
 
-Türkçe Döküman
-======
+> Türkçe Döküman
 
 
 PHP Btcturk API Class
