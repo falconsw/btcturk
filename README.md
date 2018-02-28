@@ -60,3 +60,15 @@ Kullanımı
 [Source](https://github.com/BTCTrader/broker-api-docs)
 
 [coinfono.com](https://coinfono.com)
+
+License
+-----
+
+Larislackers-BinanceApi is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+Donations/Support
+-----
+
+If you find this library to your liking and enjoy using it, please consider a donation to one of the following addresses:
+* BTC: 3BCC4zNHhEyS38kEBVSDcj4MDZpnanwEUD
+* ETH: 0x0d57c1535b90cebaa8b2c6aa0cff5d7f20e7a75d
