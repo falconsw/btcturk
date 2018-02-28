@@ -2,6 +2,7 @@
 /**
  * BtcTurk API wrapper class
  * @author Ömer Doğan <omer_dogan@outlook.com>
+ * @company Coinfono <http://coinfono.com>
  */
 
 class Client
