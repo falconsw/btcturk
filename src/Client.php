@@ -160,49 +160,18 @@ class Client
      */
     public function getBalances($symbol = '')
     {
-        $query = $this->get_call('balance', '', true);
-        $btc = array(
-            'symbol' => 'BTC',
-            'balance' => $query->btc_balance,
-            'reserved' => $query->btc_reserved,
-            'available' => $query->btc_available,
-            'trytaker_fee' => $query->btctry_taker_fee_percentage,
-            'trymaker_fee' => $query->btctry_maker_fee_percentage,
-        );
+        $query = $this->get_call('balancev2', '', true);
+	    if($symbol){
+		    foreach ($query->Data as $value) {
+			    if ($value->currency == $symbol) {
+				    return  $value;
+			    }
+		    }
+	    } else {
+		    return  $query->Data;
+	    }
 
-        $eth = array(
-            'symbol' => 'ETH',
-            'balance' => $query->eth_balance,
-            'reserved' => $query->eth_reserved,
-            'available' => $query->eth_available,
-            'trytaker_fee' => $query->ethtry_taker_fee_percentage,
-            'trymaker_fee' => $query->ethtry_maker_fee_percentage,
-            'btctaker_fee' => $query->ethbtc_taker_fee_percentage,
-            'btcmaker_fee' => $query->ethbtc_maker_fee_percentage,
-        );
 
-        $try = array(
-            'symbol' => 'TRY',
-            'balance' => $query->try_balance,
-            'reserved' => $query->try_reserved,
-            'available' => $query->try_available,
-        );
-
-        if (empty($symbol)) {
-            $array = array($btc, $eth, $try);
-
-            return $array;
-        } else {
-            if ($symbol == 'BTC') {
-                return $btc;
-            } elseif ($symbol == 'ETH') {
-                return $eth;
-            } elseif ($symbol == 'TRY') {
-                return $try;
-            } else {
-                return array("message"=>"Symbol Error");
-            }
-        }
     }
 
 
@@ -381,4 +350,20 @@ class Client
                 'DenominatorPrecision' => 2, ), true, true);
         //getStopSell("BTCTRY","0","001","39800","00","40000","00")
     }
+
+	public function getStopMarketSell($symbol, $total, $totalPrecision, $price, $pricePrecision, $triggerPrice, $triggerPricePrecision)
+	{
+		return $this->get_call('exchange',
+			array('OrderMethod' => 3,
+			      'OrderType' => 1,
+			      'PairSymbol' => $symbol,
+			      'amount' => $total,
+			      'amountPrecision' => $totalPrecision,
+			      'price' => $price,
+			      'pricePrecision' => $pricePrecision,
+			      'triggerPrice' => $triggerPrice,
+			      'triggerPricePrecision' => $triggerPricePrecision,
+			      'DenominatorPrecision' => 2, ), true, true);
+		//getStopSell("BTCTRY","0","001","39800","00","40000","00")
+	}
 }
